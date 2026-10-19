@@ -16,6 +16,7 @@
     <header class="game-head">
       <h1>Rock <span>·</span> Paper <span>·</span> Scissors</h1>
       <p class="subtitle">First to <strong id="targetScore">5</strong> wins — good luck!</p>
+      <button class="help-btn" id="helpBtn" type="button">How to play</button>
     </header>
 
     <section class="scoreboard">
@@ -72,6 +73,22 @@
       <h2 id="overlayTitle">You win!</h2>
       <p id="overlayText">Final score 5 – 3</p>
       <button class="btn" id="playAgainBtn">Play again</button>
+    </div>
+  </div>
+
+  <div class="help-modal" id="helpModal" hidden>
+    <div class="help-backdrop" data-close></div>
+    <div class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+      <button class="help-close" id="helpClose" type="button" aria-label="Close">×</button>
+      <h2 class="help-title" id="helpTitle">How to play</h2>
+      <p class="help-lede">A best-of series against the computer. Each round you both pick rock, paper or scissors and the winner takes a point.</p>
+      <ol class="help-steps">
+        <li>Pick rock, paper or scissors, or press <kbd>R</kbd>, <kbd>P</kbd> or <kbd>S</kbd>.</li>
+        <li>Rock beats scissors, scissors beats paper and paper beats rock.</li>
+        <li>A draw gives nobody a point, so play on.</li>
+        <li>The first side to reach the target score wins the match.</li>
+        <li>Change the target with the picker, or reset the score to start over.</li>
+      </ol>
     </div>
   </div>
 

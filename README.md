@@ -8,6 +8,7 @@ Play rock, paper, scissors against the computer.
 - Animated hand shake and coloured round feedback
 - Keyboard shortcuts: R, P and S
 - Score tracking with a win overlay
+- A How to play popup explains the rules
 
 ## Running it
 
