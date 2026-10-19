@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock · Paper · Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="arena-bg" aria-hidden="true"></div>
+
+  <main class="game">
+    <header class="game-head">
+      <h1>Rock <span>·</span> Paper <span>·</span> Scissors</h1>
+      <p class="subtitle">First to <strong id="targetScore">5</strong> wins — good luck!</p>
+    </header>
+
+    <section class="scoreboard">
+      <div class="score-card you">
+        <span class="score-label">You</span>
+        <span class="score-value" id="playerScore">0</span>
+      </div>
+      <div class="vs">VS</div>
+      <div class="score-card cpu">
+        <span class="score-label">Computer</span>
+        <span class="score-value" id="cpuScore">0</span>
+      </div>
+    </section>
+
+    <section class="battle">
+      <div class="hand you-hand" id="playerHand">✊</div>
+      <div class="result-text" id="resultText">Make your move</div>
+      <div class="hand cpu-hand" id="cpuHand">✊</div>
+    </section>
+
+    <section class="controls" id="controls">
+      <button class="move-btn" data-move="rock">
+        <span class="move-emoji">✊</span>
+        <span class="move-name">Rock</span>
+      </button>
+      <button class="move-btn" data-move="paper">
+        <span class="move-emoji">✋</span>
+        <span class="move-name">Paper</span>
+      </button>
+      <button class="move-btn" data-move="scissors">
+        <span class="move-emoji">✌️</span>
+        <span class="move-name">Scissors</span>
+      </button>
+    </section>
+
+    <div class="game-actions">
+      <button class="btn ghost" id="resetBtn">Reset score</button>
+      <div class="target-picker">
+        <label for="targetSelect">Play to:</label>
+        <select id="targetSelect">
+          <option value="3">3</option>
+          <option value="5" selected>5</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="hint">Tip: press <kbd>R</kbd>, <kbd>P</kbd> or <kbd>S</kbd> to play.</p>
+  </main>
+
+  <div class="overlay" id="overlay" hidden>
+    <div class="overlay-card">
+      <div class="overlay-emoji" id="overlayEmoji">🏆</div>
+      <h2 id="overlayTitle">You win!</h2>
+      <p id="overlayText">Final score 5 – 3</p>
+      <button class="btn" id="playAgainBtn">Play again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
