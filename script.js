@@ -139,6 +139,8 @@ targetSelect.addEventListener('change', () => {
 
 const KEY_MAP = { r: 'rock', p: 'paper', s: 'scissors' };
 document.addEventListener('keydown', (e) => {
+  const tag = e.target.tagName;
+  if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
   if (e.key === 'Escape' && !overlay.hidden) {
     resetGame();
     return;
